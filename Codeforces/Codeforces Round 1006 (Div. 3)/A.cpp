@@ -19,15 +19,18 @@ int main()
 
     while (t--)
     {
-        string w;
-        cin >> w;
+        int n , k , p;
+        cin >> n >> k >> p;
 
-        int n = w.length();
-
-        string x = w.substr(0,(n-2));
-
-        cout << x + "i" << nl;
-       
+        int x = abs(k);
+        if((n*p) >= x){
+            if( (x % p == 0)){
+                cout << (x/p) << nl;
+            } else {
+                cout << (x/p) + 1 << nl;
+            }
+        }
+        else if((n*p) < x) cout << -1 << nl;
     }
     HeHe;
 }
